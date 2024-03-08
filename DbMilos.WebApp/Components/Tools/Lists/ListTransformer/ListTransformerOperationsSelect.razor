@@ -1,0 +1,29 @@
+﻿@using DbMilos.Domain.ListTransformer
+<div>
+    <label>
+        Select operation:
+    </label>
+    <select @onchange=HandleSelectedOperationChange>
+        <option selected disabled>--choose an operation--</option>
+        <option value=@ListTransformerOperations.ToUppercase>To Uppercase</option>
+        <option value=@ListTransformerOperations.ToLowercase>To Lowercase</option>
+        <option value=@ListTransformerOperations.ToPascalCase>To Pascal Case</option>
+        <option value=@ListTransformerOperations.ToReverse>Reverse Words</option>
+        <option>Make Slugs</option>
+    </select>
+</div>
+@code {
+    [Parameter]
+    public ListTransformerOperations SelectedOperation { get; set; }
+    [Parameter]
+    public EventCallback<ListTransformerOperations> SelectedOperationChanged { get; set; }
+    public async Task HandleSelectedOperationChange(ChangeEventArgs e)
+    {
+        SelectedOperation = (ListTransformerOperations)Enum.Parse(
+            typeof(ListTransformerOperations),
+            (string)e.Value
+        );
+        await SelectedOperationChanged.InvokeAsync(SelectedOperation);
+        this.StateHasChanged();
+    }
+}

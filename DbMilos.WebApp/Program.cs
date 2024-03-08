@@ -6,6 +6,7 @@ using DbMilos.WebApp.Data;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.FluentUI.AspNetCore.Components;
 
 namespace DbMilos.WebApp
 {
@@ -43,6 +44,8 @@ namespace DbMilos.WebApp
 
             builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
 
+            builder.Services.AddHttpClient();
+            builder.Services.AddFluentUIComponents();
             //
 
             builder.Services.AddScoped<IListParser, ListParser>();

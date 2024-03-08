@@ -5,13 +5,13 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbMilos.Infrastructure", "DbMilos.Infrastructure\DbMilos.Infrastructure.csproj", "{D86CCE76-A13C-45A7-A7C2-110C10933A44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbMilos.Tests", "DbMilos.Tests\DbMilos.Tests.csproj", "{8583E7A9-9744-4EAF-8919-B3978911628A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbMilos.Tests", "DbMilos.Tests\DbMilos.Tests.csproj", "{8583E7A9-9744-4EAF-8919-B3978911628A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbMilos.Application", "DbMilos.Application\DbMilos.Application.csproj", "{5E1D547A-AA39-4CE4-9F71-5138FC404334}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbMilos.Application", "DbMilos.Application\DbMilos.Application.csproj", "{5E1D547A-AA39-4CE4-9F71-5138FC404334}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbMilos.Domain", "DbMilos.Domain\DbMilos.Domain.csproj", "{BD562E6C-BA10-4043-BE6C-B58CC004D287}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbMilos.Domain", "DbMilos.Domain\DbMilos.Domain.csproj", "{BD562E6C-BA10-4043-BE6C-B58CC004D287}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbMilos.WebApp", "DbMilos.WebApp\DbMilos.WebApp.csproj", "{7670CA4E-23BF-4FAF-AF30-5A84C4508991}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbMilos.WebApp", "DbMilos.WebApp\DbMilos.WebApp.csproj", "{7670CA4E-23BF-4FAF-AF30-5A84C4508991}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
