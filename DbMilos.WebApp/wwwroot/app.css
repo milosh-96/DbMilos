@@ -46,3 +46,26 @@ h1:focus {
 .darker-border-checkbox.form-check-input {
     border-color: #929292;
 }
+
+main {
+    min-height:50vh;
+}
+
+/* footer */
+.footer {
+    margin:16px 0px;
+}
+/* featured home grid */
+
+.featured-home-grid__large-item {
+    min-height:300px;
+}
+.featured-home-grid__small-item {
+    min-height:150px;
+}
+
+.category.category--home {
+    background: #ccc;
+    padding: 8px;
+    display:flex;
+}

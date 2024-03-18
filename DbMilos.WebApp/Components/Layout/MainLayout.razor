@@ -1,11 +1,29 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
+    <header>
+        <nav class="navbar bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">DBMiloš.com</a>
+            </div>
+        </nav>
+    </header>
     <main>
-        <article class="content px-4">
-            @Body
+        <article class="content">
+            <div class="container">
+                @Body
+            </div>
         </article>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    &copy; @DateTime.Now.Year DBMiloš.com
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
 
 <div id="blazor-error-ui">

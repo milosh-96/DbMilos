@@ -4,6 +4,7 @@
 @inject IListParser listParser
 @inject IListTransformer listTransformer
 @rendermode InteractiveServer
+<PageTitle>List Transformer</PageTitle>
 <div>
     <h2>List Transformer</h2>
     <p>Enter your list items, choose separator and modify all of them in one click.</p>
@@ -36,11 +37,11 @@
     }
     <div>
         @if(CurrentStep > 0){
-            <button @onclick="()=>{CurrentStep--;}">Prev</button>
+            <button class="btn btn-secondary" @onclick="()=>{CurrentStep--;}">Prev</button>
         }
         @if (CurrentStep < NumberOfSteps)
         {
-            <button @onclick="()=>{CurrentStep++;}">Next</button>
+            <button class="btn btn-primary" @onclick="()=>{CurrentStep++;}">Next</button>
         }
     </div>
     @* <div>
