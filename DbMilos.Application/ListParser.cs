@@ -14,6 +14,19 @@ namespace DbMilos.Application
             return items.Split(separator).ToList();
         }
 
-        
+        public List<string> ParseItems(string items, string separator, bool trimWhitespace = true)
+        {
+            var parsed = this.ParseItems(items, separator);
+            if (trimWhitespace)
+            {
+                List<string> trimmed = new List<string>();
+                parsed.ForEach(x =>
+                {
+                    trimmed.Add(x.Trim());
+                });
+                return trimmed;
+            }
+            return parsed;
+        }
     }
 }

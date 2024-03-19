@@ -1,0 +1,13 @@
+@DbMilos.WebApi_HostAddress = https://localhost:44347
+
+POST {{DbMilos.WebApi_HostAddress}}/api/lists/listtransformer
+Content-Type: application/json
+Accept: application/json
+
+{
+    "content": "coffee,ice cream,  milk",
+    "separator": ",",
+    "operation": "2",
+    "trim":"true"
+}
+###

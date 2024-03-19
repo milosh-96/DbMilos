@@ -25,5 +25,19 @@ namespace DbMilos.Tests
             int actual = parser.ParseItems(items, separator).Count;
             Assert.Equal(expected, actual);
         }
+        [Fact]
+        public void ListParser_ParseFromString_TrimmingWorksIfActivated()
+        {
+            string actual = string.Join(",",parser.ParseItems("1, 2, 3, 4, 5, 6,7,  ",",",true));
+            string expected = "1,2,3,4,5,6,7,";
+            Assert.Equal(expected, actual);
+        }
+        [Fact]
+        public void ListParser_ParseFromString_TrimmingDoesntHappenIfDectivated()
+        {
+            string actual = string.Join(",",parser.ParseItems("1, 2, 3, 4, 5, 6,7,  ",",",false));
+            string expected = "1, 2, 3, 4, 5, 6,7,  ";
+            Assert.Equal(expected, actual);
+        }
     }
 }

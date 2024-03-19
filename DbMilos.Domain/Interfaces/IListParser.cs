@@ -9,5 +9,6 @@ namespace DbMilos.Domain.Interfaces
     public interface IListParser
     {
         public List<string> ParseItems(string items, string separator);
+        public List<string> ParseItems(string items, string separator, bool trimWhitespace);
     }
 }
