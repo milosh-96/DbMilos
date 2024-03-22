@@ -6,8 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DbMilos.WebApi.Features.Tools.Lists.ListTransformer
 {
-    [Route("api/lists/[controller]")]
-    [Route("api/[controller]")]
+    [Route("api/lists/[controller]/[action]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class ListTransformerController : ControllerBase
     {
@@ -21,7 +21,6 @@ namespace DbMilos.WebApi.Features.Tools.Lists.ListTransformer
         }
 
         [HttpPost]
-        [Route("")]
         public async Task<IActionResult> Transform([FromBody]ListTransformerRequest request)
         {
             bool trim = true;
@@ -50,6 +49,12 @@ namespace DbMilos.WebApi.Features.Tools.Lists.ListTransformer
                     break;
             }
             return new JsonResult(result);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetOperations()
+        {
+            return new JsonResult(Enum.GetValues<ListTransformerOperations>());
         }
     }
 }

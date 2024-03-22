@@ -1,8 +1,25 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<div id="home-page">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div>
+        <div>
+            <h2 class="">Welcome</h2>
+            
+        </div>
+        <hr />
+        <div class="grid">
+            <div>
+               <h3>Latest Tools</h3>
+                <a asp-page="/Tools/Lists/ListTransformer">List Transformer</a>
+
+            </div>
+            <div>
+                <h3>Latest Facts</h3>
+            </div>
+        </div>
+
+
+    </div>
 </div>

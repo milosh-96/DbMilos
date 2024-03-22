@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbMilos.Application", "DbMi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbMilos.Domain", "DbMilos.Domain\DbMilos.Domain.csproj", "{BD562E6C-BA10-4043-BE6C-B58CC004D287}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbMilos.WebApi", "DbMilos.WebApi\DbMilos.WebApi.csproj", "{4050017A-AB68-4977-9752-8625066DCC5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbMilos.WebApi", "DbMilos.WebApi\DbMilos.WebApi.csproj", "{4050017A-AB68-4977-9752-8625066DCC5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbMilos.WebApp", "DbMilos.WebApp\DbMilos.WebApp.csproj", "{DB51D798-C2D9-4C9A-A96B-6CC2D9BC3198}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbMilos.WebApp", "DbMilos.WebApp\DbMilos.WebApp.csproj", "{DB51D798-C2D9-4C9A-A96B-6CC2D9BC3198}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

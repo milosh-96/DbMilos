@@ -26,7 +26,18 @@ namespace DbMilos.WebApi
             // tools //
             builder.Services.AddScoped<IListParser, ListParser>();
             builder.Services.AddScoped<IListTransformer, ListTransformer>();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("specificorigins", policy =>
+                {
+                    policy.WithHeaders("Content-Type");
+                    policy.WithOrigins("https://dbmilos.com");
+                    policy.WithOrigins("http://localhost:5173");
+                });
+            });
             var app = builder.Build();
+
+            app.UseCors("specificorigins");
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -35,13 +46,16 @@ namespace DbMilos.WebApi
                 app.UseSwaggerUI();
             }
 
+          
+
+
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
 
 
             app.MapControllers();
-
+            app.UseCors();
             app.Run();
         }
     }
